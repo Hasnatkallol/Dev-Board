@@ -9,11 +9,245 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Fontawsome Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+    .poppins{
+      font-family: "Poppins", sans-serif;
+     }
+    </style>
 </head>
-<body>
-    
-<h1>kallol</h1>
+<body  class="bg-[rgb(244,247,255)]  pt-5 pb-5">
+    <section class="header flex justify-between container w-11/12 mx-auto border-none bg-white rounded-lg p-5">
+        <div class="flex justify-center items-center gap-2">
+            <div class="w-[51px] h-[51px]">
+                <img src="./assets/logo.png" alt="">
+            </div>
+            <div>
+                <h1 class="poppins font-normal text-[rgb(0,48,60)] text-[36px]">Dev <span class="font-bold"> Board</span></h1>
+            </div>
+        </div>
+        <div class="flex justify-center items-center gap-2"> 
+           <div class="justify-center items-center flex gap-2 px-2 bg-[rgb(244,247,255)] rounded-3xl border-none">
+             <i class="fa-solid fa-check w-[32px] h-[32px] bg-blue-700 text-white rounded-md flex justify-center items-center font-bold text-[20px]"></i> <span id="totalAmount" class="poppins font-bold text-[32px] text-[rgb(30,30,30)] ">23</span> 
+            </div>
+           <div onclick="changeColor()" class="p-2 bg-[rgb(244,247,255)]  rounded-3xl border-none"><img src="./assets/theme-btn.png" alt=""></div>
+        </div>
+    </section>
 
-    <script src="./js/script.js"></script>
+    <main>
+        <section class="hero flex justify-between container w-11/12 mx-auto  rounded-lg p-5 mt-5">
+             <div class="flex gap-8  ">
+                <div class="w-[990px] h-[800px] border-none  p-4 rounded-lg bg-white">
+                    
+                     <div class="flex space-x-4">
+                         <div class=" flex space-x-2 justify-center items-center rounded-lg bg-[rgb(244,247,255)] w-[264px] h-[128px]">
+                             <div class="bg-white w-[60px] h-[60px] p-3 rounded-full flex justify-center items-center">
+                                <i class="fa-solid fa-check w-[32px] h-[32px] bg-blue-700 text-white rounded-md flex justify-center items-center font-bold text-[20px]"></i>
+                             </div>
+                             <div>
+                                 <h1 class="text-gray-500 poppins">Task Assigned</h1>
+                                 <h1 id="taskCount" class="text-black font-bold poppins text-4xl">06</h1>
+                             </div>
+                         </div>
+                         <div class=" rounded-lg bg-[linear-gradient(130.70deg,_rgb(55,_82,_253)_0.419%,_rgb(108,_127,_250)_52.66%,_rgb(155,_168,_248)_99.733%)] w-[564px] h-[128px] flex justify-center items-center space-x-2 p-5">
+                                <img src="./assets/board.png" alt="">
+                                <h1 class="font-medium text-white text-4xl">Discover something New Today !</h1>
+                         </div>
+                         <div class=" flex space-x-2 justify-center items-center rounded-lg bg-[rgb(244,247,255)] w-[264px] h-[128px]">
+                            <div class="bg-white w-[60px] h-[60px] p-3 rounded-full flex justify-center items-center">
+                               <!-- <i class="fa-calendar-week w-[32px] h-[32px]  rounded-md flex justify-center items-center font-bold text-[20px]"></i> -->
+                               <i class="fa-solid fa-calendar-week w-[32px] h-[32px] flex justify-center items-center font-bold text-[25px]"></i>
+                            </div>
+                            <div id="dateToday">
+                                <!-- <h1 class="text-gray-500 poppins text-2xl">Wed ,</h1>
+                                <h1 class="text-black font-bold poppins text-xl">July 28 2025</h1> -->
+                            </div>
+                        </div>
+                     </div>
+                     <div class="border-b-2 border-dotted border-gray-400 mt-5"></div>
+
+                     <!-- card Part -->
+            <div class="cards mt-5 grid grid-cols-3 gap-3 border-none">
+                <div  class="card  flex space-x-2  rounded-lg
+                 bg-[rgb(244,247,255)]  p-4 justify-center">
+                     <div class="bg-white flex items-center justify-center rounded-md px-4 py-2 border-none w-[122px] h-[47px] ml-3 ">
+                        <h1 class="text-black poppins">ShopEase</h1>
+                     </div>
+                     <div>
+                        <h1 id="title" class="text-2xl font-medium my-2 text-black">Fix Mobile Button Issue</h1>
+                     </div>
+                     <div class="bg-white flex items-center justify-center rounded-md px-2 py-2 border-none w-[px] h-[50px]">
+                        <h1 class="text-black poppins opacity-[0.5] poppins">
+                            Debug using Chrome DevTools, check for overlapping ...
+                        </h1>
+                     </div>
+                     <div class="border-b-2 border-dotted border-gray-400 my-5"></div>
+                     <div class="flex justify-between items-center border-none ">
+                         <div>
+                            <p class="poppins">Deadline</p>
+                            <h1 class="poppins font-medium text-black">21 March 2025</h1>
+                         </div>
+                         <button id="button1" class="button border-none rounded-md  w-[120px] h-[50px]
+                          bg-blue-700 text-white poppins font-normal hover:bg-blue-900">Completed</button>
+                     </div>
+                  
+                </div>
+                <div  class="card  flex space-x-2  rounded-lg
+                 bg-[rgb(244,247,255)] p-4 justify-center">
+                     <div class="bg-white flex items-center justify-center rounded-md px-4 py-2 border-none w-[122px] h-[47px] ml-3 ">
+                        <h1 class="text-black poppins">CloudSync</h1>
+                     </div>
+                     <div>
+                        <h1 id="title" class="text-2xl font-medium my-3 text-black">Add Dark Mode</h1>
+                     </div>
+                     <div class="bg-white flex items-center justify-center rounded-md px-2 py-2 border-none w-[px] h-[50px] ">
+                        <h1 class="text-black poppins opacity-[0.5] poppins">
+                            store the users preference in localstorage , update css ...
+                        </h1>
+                     </div>
+                     <div class="border-b-2 border-dotted border-gray-400 my-5"></div>
+                     <div class="flex justify-between items-center border-none ">
+                         <div>
+                            <p class="poppins">Deadline</p>
+                            <h1 class="poppins font-medium text-black">21 March 2025</h1>
+                         </div>
+                         <button id="button2" class="button border-none rounded-md  w-[120px] h-[50px]
+                          bg-blue-700 text-white poppins font-normal hover:bg-blue-900">Completed</button>
+                     </div>
+                  
+                </div>
+                <div  class="card  flex space-x-2  rounded-lg
+                 bg-[rgb(244,247,255)] p-4 justify-center">
+                     <div class="bg-white flex items-center justify-center rounded-md px-4 py-2 border-none w-[122px] h-[47px] ml-3 ">
+                        <h1 class="text-black poppins">SwiftPay</h1>
+                     </div>
+                     <div>
+                        <h1 class="text-2xl font-medium my-3 text-black">Optimize Home Page</h1>
+                     </div>
+                     <div class="bg-white flex items-center justify-center rounded-md px-2 py-2 border-none w-[px] h-[50px] ">
+                        <h1 class="text-black poppins opacity-[0.5] poppins">
+                            Debug using Chrome DevTools, check for overlapping ...
+                        </h1>
+                     </div>
+                     <div class="border-b-2 border-dotted border-gray-400 my-5"></div>
+                     <div class="flex justify-between items-center border-none ">
+                         <div>
+                            <p class="poppins">Deadline</p>
+                            <h1 class="poppins font-medium text-black">21 March 2025</h1>
+                         </div>
+                         <button id="button3" class="button border-none rounded-md  w-[120px] h-[50px]
+                          bg-blue-700 text-white poppins font-normal hover:bg-blue-900">Completed</button>
+                     </div>
+                  
+                </div>
+                <div  class="card  flex space-x-2  rounded-lg
+                 bg-[rgb(244,247,255)] p-4 justify-center">
+                     <div class="bg-white flex items-center justify-center rounded-md px-4 py-2 border-none w-[122px] h-[47px] ml-3 ">
+                        <h1 class="text-black poppins">Meta</h1>
+                     </div>
+                     <div>
+                        <h1 class="text-2xl font-medium my-3 text-black">Add new emoji</h1>
+                     </div>
+                     <div class="bg-white flex items-center justify-center rounded-md px-2 py-2 border-none w-[px] h-[50px] ">
+                        <h1 class="text-black poppins opacity-[0.5] poppins">
+                            Debug using Chrome DevTools, check for overlapping ...
+                        </h1>
+                     </div>
+                     <div class="border-b-2 border-dotted border-gray-400 my-5"></div>
+                     <div class="flex justify-between items-center border-none ">
+                         <div>
+                            <p class="poppins">Deadline</p>
+                            <h1 class="poppins font-medium text-black">21 March 2025</h1>
+                         </div>
+                         <button id="button4" class="button border-none rounded-md  w-[120px] h-[50px]
+                          bg-blue-700 text-white poppins font-normal hover:bg-blue-900">Completed</button>
+                     </div>
+                  
+                </div>
+                <div  class="card  flex space-x-2  rounded-lg
+                 bg-[rgb(244,247,255)] p-4 justify-center">
+                     <div class="bg-white flex items-center justify-center rounded-md px-4 py-2 border-none w-[122px] h-[47px] ml-3 ">
+                        <h1 class="text-black poppins">Google LLC</h1>
+                     </div>
+                     <div>
+                        <h1 class="text-2xl font-medium my-3 text-black">Integrate OpenAi Api</h1>
+                     </div>
+                     <div class="bg-white flex items-center justify-center rounded-md px-2 py-2 border-none w-[px] h-[50px] ">
+                        <h1 class="text-black poppins opacity-[0.5] poppins">
+                            Debug using Chrome DevTools, check for overlapping ...
+                        </h1>
+                     </div>
+                     <div class="border-b-2 border-dotted border-gray-400 my-5"></div>
+                     <div class="flex justify-between items-center border-none ">
+                         <div>
+                            <p class="poppins">Deadline</p>
+                            <h1 class="poppins font-medium text-black">21 March 2025</h1>
+                         </div>
+                         <button id="button5" class="button border-none rounded-md  w-[120px] h-[50px]
+                          bg-blue-700 text-white poppins font-normal hover:bg-blue-900">Completed</button>
+                     </div>
+                  
+                </div>
+                <div  class="card  flex space-x-2  rounded-lg
+                 bg-[rgb(244,247,255)] p-4 justify-center">
+                     <div class="bg-white flex items-center justify-center rounded-md px-4 py-2 border-none w-[122px] h-[47px] ml-3 ">
+                        <h1 class="text-black poppins">Glassdoar</h1>
+                     </div>
+                     <div>
+                        <h1 class="text-2xl font-medium my-3 text-black">Improve Job Searching</h1>
+                     </div>
+                     <div class="bg-white flex items-center justify-center rounded-md px-2 py-2 border-none w-[px] h-[50px] ">
+                        <h1 class="text-black poppins opacity-[0.5] poppins">
+                            Debug using Chrome DevTools, check for overlapping ...
+                        </h1>
+                     </div>
+                     <div class="border-b-2 border-dotted border-gray-400 my-5"></div>
+                     <div class="flex justify-between items-center border-none ">
+                         <div>
+                            <p class="poppins">Deadline</p>
+                            <h1 class="poppins font-medium text-black">21 March 2025</h1>
+                         </div>
+                         <button id="button6" class="button border-none rounded-md  w-[120px] h-[50px]
+                          bg-blue-700 text-white poppins font-normal hover:bg-blue-900">Completed</button>
+                     </div>
+                  
+                </div>
+             </div>
+                </div>
+
+                
+
+                <div class="w-2/6 h-[800px] border-none p-4 rounded-lg bg-white">
+                     <div class="w-[450px] border-none py-4">
+                         <div class="flex justify-center items-center gap-2 ">
+                             <img src="./assets/activity.png" class="w-[px] h-[px]" alt="">
+                             <h1 class="font-bold text-2xl text-black py-2">Activity Log</h1>
+                         </div>
+                         <button id="clearBtn" class="border-none rounded-md  w-[120px] h-[50px]
+                         bg-blue-700 text-white poppins font-normal hover:bg-blue-900 flex justify-center items-center mx-auto">Clear History</button>
+                     </div>
+                     <div class="border-b-2 border-dotted border-gray-400 my-5"></div>
+
+                     <!-- History -->
+                     <div class="space-y-3 rounded-lg  p-4 justify-center">
+                       
+                         <!-- <h1 class="poppins font-normal text-[24px] bg-[rgb(244,247,255)] rounded-md p-4   opacity-[0.7]">You have Complete The Task Add Dark Mode at 12:48:15 PM</h1> -->
+                          <div id="container" class="space-y-3">
+                            
+                          </div>
+                     </div>
+
+                </div>
+             </div>
+
+        </section>
+    </main>
+
+
+<script src="./js/script.js"></script>
+<script src="./js/utilities.js"></script>
 </body>
 </html>
