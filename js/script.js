@@ -47,7 +47,7 @@ document.getElementById('clearBtn').addEventListener('click',function(){
 
 document.getElementById('toggle').addEventListener('click',function(e){
     e.preventDefault()
-    window.location.href = './question.html'
+    window.location.href = './blog.html'
 })
 
 
