@@ -54,30 +54,29 @@
                          </div>
                          <div class=" rounded-lg bg-[linear-gradient(130.70deg,_rgb(55,_82,_253)_0.419%,_rgb(108,_127,_250)_52.66%,_rgb(155,_168,_248)_99.733%)] w-[564px] h-[128px] flex justify-center items-center space-x-2 p-5">
                                 <img src="./assets/board.png" alt="">
-                                <h1 class="font-medium text-white text-4xl">Discover something New Today !</h1>
+                                <h1 id="toggle" class="font-medium text-white text-4xl">Discover something New Today !</h1>
                          </div>
                          <div class=" flex space-x-2 justify-center items-center rounded-lg bg-[rgb(244,247,255)] w-[264px] h-[128px]">
                             <div class="bg-white w-[60px] h-[60px] p-3 rounded-full flex justify-center items-center">
-                               <!-- <i class="fa-calendar-week w-[32px] h-[32px]  rounded-md flex justify-center items-center font-bold text-[20px]"></i> -->
+                              
                                <i class="fa-solid fa-calendar-week w-[32px] h-[32px] flex justify-center items-center font-bold text-[25px]"></i>
                             </div>
                             <div id="dateToday">
-                                <!-- <h1 class="text-gray-500 poppins text-2xl">Wed ,</h1>
-                                <h1 class="text-black font-bold poppins text-xl">July 28 2025</h1> -->
+                               
                             </div>
                         </div>
                      </div>
                      <div class="border-b-2 border-dotted border-gray-400 mt-5"></div>
 
                      <!-- card Part -->
-            <div class="cards mt-5 grid grid-cols-3 gap-3 border-none">
+            <div id="cards" class="cards mt-5 grid grid-cols-3 gap-3 border-none">
                 <div  class="card  flex space-x-2  rounded-lg
                  bg-[rgb(244,247,255)]  p-4 justify-center">
                      <div class="bg-white flex items-center justify-center rounded-md px-4 py-2 border-none w-[122px] h-[47px] ml-3 ">
                         <h1 class="text-black poppins">ShopEase</h1>
                      </div>
                      <div>
-                        <h1 id="title" class="text-2xl font-medium my-2 text-black">Fix Mobile Button Issue</h1>
+                        <h1 id="title1" class="title text-2xl font-medium my-2 text-black">Fix Mobile Button Issue</h1>
                      </div>
                      <div class="bg-white flex items-center justify-center rounded-md px-2 py-2 border-none w-[px] h-[50px]">
                         <h1 class="text-black poppins opacity-[0.5] poppins">
@@ -101,7 +100,7 @@
                         <h1 class="text-black poppins">CloudSync</h1>
                      </div>
                      <div>
-                        <h1 id="title" class="text-2xl font-medium my-3 text-black">Add Dark Mode</h1>
+                        <h1 id="title2" class="title text-2xl font-medium my-3 text-black">Add Dark Mode</h1>
                      </div>
                      <div class="bg-white flex items-center justify-center rounded-md px-2 py-2 border-none w-[px] h-[50px] ">
                         <h1 class="text-black poppins opacity-[0.5] poppins">
@@ -125,7 +124,7 @@
                         <h1 class="text-black poppins">SwiftPay</h1>
                      </div>
                      <div>
-                        <h1 class="text-2xl font-medium my-3 text-black">Optimize Home Page</h1>
+                        <h1 id="title3" class="title text-2xl font-medium my-3 text-black">Optimize Home Page</h1>
                      </div>
                      <div class="bg-white flex items-center justify-center rounded-md px-2 py-2 border-none w-[px] h-[50px] ">
                         <h1 class="text-black poppins opacity-[0.5] poppins">
@@ -149,7 +148,7 @@
                         <h1 class="text-black poppins">Meta</h1>
                      </div>
                      <div>
-                        <h1 class="text-2xl font-medium my-3 text-black">Add new emoji</h1>
+                        <h1 id="title4" class="title text-2xl font-medium my-3 text-black">Add new emoji</h1>
                      </div>
                      <div class="bg-white flex items-center justify-center rounded-md px-2 py-2 border-none w-[px] h-[50px] ">
                         <h1 class="text-black poppins opacity-[0.5] poppins">
@@ -170,7 +169,7 @@
                 <div  class="card  flex space-x-2  rounded-lg
                  bg-[rgb(244,247,255)] p-4 justify-center">
                      <div class="bg-white flex items-center justify-center rounded-md px-4 py-2 border-none w-[122px] h-[47px] ml-3 ">
-                        <h1 class="text-black poppins">Google LLC</h1>
+                        <h1 id="title5" class="title text-black poppins">Google LLC</h1>
                      </div>
                      <div>
                         <h1 class="text-2xl font-medium my-3 text-black">Integrate OpenAi Api</h1>
@@ -196,8 +195,8 @@
                      <div class="bg-white flex items-center justify-center rounded-md px-4 py-2 border-none w-[122px] h-[47px] ml-3 ">
                         <h1 class="text-black poppins">Glassdoar</h1>
                      </div>
-                     <div>
-                        <h1 class="text-2xl font-medium my-3 text-black">Improve Job Searching</h1>
+                     <div class="head">
+                        <h1 id="title-6" class="title text-2xl font-medium my-3 text-black">Improve Job Searching</h1>
                      </div>
                      <div class="bg-white flex items-center justify-center rounded-md px-2 py-2 border-none w-[px] h-[50px] ">
                         <h1 class="text-black poppins opacity-[0.5] poppins">
@@ -232,10 +231,10 @@
                      <div class="border-b-2 border-dotted border-gray-400 my-5"></div>
 
                      <!-- History -->
-                     <div class="space-y-3 rounded-lg  p-4 justify-center">
+                     <div class="space-y-3 rounded-lg h-[600px]   p-4 justify-center overflow-hidden overflow-y-auto">
                        
-                         <!-- <h1 class="poppins font-normal text-[24px] bg-[rgb(244,247,255)] rounded-md p-4   opacity-[0.7]">You have Complete The Task Add Dark Mode at 12:48:15 PM</h1> -->
-                          <div id="container" class="space-y-3">
+                    
+                          <div id="container" class="space-y-3 ">
                             
                           </div>
                      </div>

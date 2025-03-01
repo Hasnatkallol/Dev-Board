@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+    <!-- Tailwind and DaisyUi link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fontawsome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+    .poppins{
+      font-family: "Poppins", sans-serif;
+     }
+    </style>
+</head>
+<body  class="bg-[rgb(244,247,255)]  pt-5 pb-5">
+
+    <section class="header flex justify-between container w-11/12 mx-auto border-none bg-white rounded-lg p-5">
+        <div class="flex justify-center items-center gap-2">
+            <div class="w-[51px] h-[51px]">
+                <img src="./assets/logo.png" alt="">
+            </div>
+            <div>
+                <h1 class="poppins font-normal text-[rgb(0,48,60)] text-[36px]">Dev <span class="font-bold"> Board</span></h1>
+            </div>
+        </div>
+        <div class="flex justify-center items-center gap-2"> 
+            <button id="backButton" class="button border-none rounded-md  w-[120px] h-[50px]
+            bg-blue-700 text-white poppins font-normal hover:bg-blue-900">Back to Desk</button>
+        </div>
+    </section>
+
+    <!-- Question -->
+
+    <section class="my-5  justify-between container w-11/12 mx-auto border-none bg-white rounded-lg p-5">
+        <div>
+            <h1 class="text-2xl font-bold text-black poppins">
+                Question-1: What are the different ways to select an element in the DOM?
+            </h1>
+        </div>
+        <div class="border-b-2 border-dotted border-gray-400 mt-5"></div>
+        <div>
+            <h1 class="text-2xl font-medium poppins mb-2">In js there are 6 ways to select an element in dom : </h1>
+            <ul>
+                <li class="text-black font-normal poppins">1. let idName = document.getElementById('idName');</li>
+                <li class="text-black font-normal poppins">2. let className = document.getElementsByClassName('className');</li>
+                <li class="text-black font-normal poppins">3. let tagName = document.getElementsByTagName('tagName');</li>
+                <li class="text-black font-normal poppins">4. let name = document.getElementsByName('name');</li>
+                <li class="text-black font-normal poppins">5. let allClass = document.querySelectorAll('.allClass');</li>
+                <li class="text-black font-normal poppins">6. let oneClass = document.querySelector('.oneClass');</li>
+            </ul>
+          
+        </div>
+    </section>
+
+    <section class="my-5  justify-between container w-11/12 mx-auto border-none bg-white rounded-lg p-5">
+        <div>
+            <h1 class="text-2xl font-bold text-black poppins">
+                Question-2: What is the difference between innerHTML, innerText, and textContent ?
+            </h1>
+        </div>
+        <div class="border-b-2 border-dotted border-gray-400 mt-5"></div>
+        <div>
+            <h1 class="text-2xl font-normal poppins">
+                There are some differents between innerText , innerHTML and innerTextContent . We only find the text of content which is visible  by innerText but we find  templete like html in innerHTML and textContent it also like innerHTML but here we find the hidden element also .
+             </h1>
+        </div>
+    </section>
+
+    <section class="my-5  justify-between container w-11/12 mx-auto border-none bg-white rounded-lg p-5">
+        <div>
+            <h1 class="text-2xl font-bold text-black poppins">
+                Question-3: What is event delegation in the DOM?
+            </h1>
+        </div>
+        <div class="border-b-2 border-dotted border-gray-400 mt-5"></div>
+        <div>
+            <h1 class="text-2xl font-normal poppins">
+                Event delegation is a technique where we select parend element then set event Listner and gandle the child elements .
+             </h1>
+        </div>
+    </section>
+
+    <section class="my-5  justify-between container w-11/12 mx-auto border-none bg-white rounded-lg p-5">
+        <div>
+            <h1 class="text-2xl font-bold text-black poppins">
+                Question-4: What is event bubbling in the DOM?
+            </h1>
+        </div>
+        <div class="border-b-2 border-dotted border-gray-400 mt-5"></div>
+        <div>
+            <h1 class="text-2xl font-normal poppins">
+                Event bubbling is mechanism of DOM where if i clicked one element than it can create a tree from childNode to parentNodes.
+             </h1>
+        </div>
+    </section>
+   
+    <section class="my-5  justify-between container w-11/12 mx-auto border-none bg-white rounded-lg p-5">
+        <div>
+            <h1 class="text-2xl font-bold text-black poppins">
+                Question-5: How do you create, add, and remove elements using JavaScript?
+            </h1>
+        </div>
+        <div class="border-b-2 border-dotted border-gray-400 mt-5"></div>
+        <div>
+            <h1 class="text-2xl font-normal poppins">
+                <span>
+                    For create an Element we use document.createElement() example :
+                    let div = document..createElement('div') and the text content is div.innerText = "hello"
+                </span>
+                <br>
+                <br>
+
+            <span>
+                For add an Element we use appendChild() example :
+                let container = document.getElementById('container');
+                let div = document.createElement('div')
+                container.appendChild(div);
+            </span>
+               <br>
+               <br>
+              <span>
+                For remove an Element we use removeChild() example :
+                let container = document.getElementById('container');
+                let div = document.createElement('div')
+                container.appendChild(div);
+                container.removeChild(div) 
+                 
+              </span>
+             </h1>
+        </div>
+    </section>
+
+
+<script src="./js/script.js"></script>
+<script src="./js/utilities.js"></script>
+</body>
+</html>

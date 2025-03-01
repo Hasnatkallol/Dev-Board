@@ -24,6 +24,13 @@ function changeColor(){
     document.body.style.background = "rgb(" + red + ", " + green + ", " + blue + ")";
 }
 
+document.getElementById('backButton').addEventListener('click',function(){
+window.location.href = './index.html'
+})
+       
+
+
+
 
 
 
