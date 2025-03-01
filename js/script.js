@@ -1,7 +1,9 @@
 let buttons = document.querySelectorAll('.button');
 for(let i = 0; i<buttons.length ;i++){
     let button = buttons[i];    
-    button.addEventListener('click',function(e){ 
+    button.addEventListener('click',function(e){
+        
+        // for title
         let parent = e.target.parentNode;
         let elementTitle = (parent.parentNode.querySelector('.title').innerText);
         
@@ -24,23 +26,17 @@ for(let i = 0; i<buttons.length ;i++){
 }
 
 
-function updateTitle(target){  
-    // let titles = document.querySelectorAll('.title');
-    // for(let i = 0 ; i < titles.length ; i++){
-         
-    // }
-   let title =  document.getElementById(id).innerText;
-
-   
- }
 
 const d = new Date();
-let todayDate = d.toDateString();
+let todayDate1 = d.toDateString();
+let todayDay = todayDate1.slice(0,4)
+let todayDate = todayDate1.slice(4)
 
 let dateToday = document.getElementById('dateToday');
 let currentDate = document.createElement('h1');
 currentDate.innerHTML = 
 `
+<h1 class="text-xl font-bold">${todayDay},</h1>
 <h1 class="text-xl font-bold">${todayDate}</h1>
 `
 dateToday.appendChild(currentDate)
